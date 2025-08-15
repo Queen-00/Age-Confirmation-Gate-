@@ -1,31 +1,31 @@
 <div align="center">
 
-<!-- Animated SVG Title (blue neon shimmer) -->
-<svg width="100%" height="110" viewBox="0 0 1200 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Age Gate Template (Green • Blue • Purple Theme)">
+<!-- Badge-Style Title (rounded button with neon gradient) -->
+<svg width="540" height="64" viewBox="0 0 540 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Age Gate Template">
   <defs>
-    <linearGradient id="grad">
-      <stop offset="0%" stop-color="#60A5FA"/>
+    <linearGradient id="badgeGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#34D399"/>
       <stop offset="50%" stop-color="#22D3EE"/>
       <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
-    <linearGradient id="shine">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <mask id="title-mask">
-      <rect width="1200" height="110" fill="black"/>
-      <text x="50%" y="72%" dominant-baseline="middle" text-anchor="middle"
-            font-family="Orbitron, ui-sans-serif, system-ui" font-size="38" font-weight="800">
-        Age Gate Template (Green • Blue • Purple Theme)
-      </text>
-    </mask>
+    <filter id="badgeGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="110" fill="url(#grad)" mask="url(#title-mask)"/>
-  <rect width="260" height="110" fill="url(#shine)" mask="url(#title-mask)">
-    <animate attributeName="x" from="-260" to="1200" dur="4s" repeatCount="indefinite" />
-  </rect>
+  <rect x="2" y="2" rx="16" ry="16" width="536" height="60" fill="#0b1324" stroke="url(#badgeGrad)" stroke-width="2" filter="url(#badgeGlow)"/>
+  <text x="50%" y="50%" fill="url(#badgeGrad)" font-family="Orbitron, ui-sans-serif, system-ui" font-size="22" font-weight="800" dominant-baseline="middle" text-anchor="middle">
+    Age Gate Template
+  </text>
 </svg>
+
+<!-- Animated typing banner (under title, above icons) -->
+<p align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2500&pause=900&center=true&vCenter=true&width=720&color=00E5FF&repeat=true&lines=%E2%80%A2%20Age%20Verification%20Gate%20%E2%80%A2;%E2%80%A2%20Ready%20to%20Use%20%E2%80%A2;%E2%80%A2%20React%20%2B%20Next.js%20%E2%80%A2;%E2%80%A2%20Tailwind%20CSS%20%2B%20Lucide%20Icons%20%E2%80%A2;%E2%80%A2%20Neon%20Theme%20%26%20LocalStorage%20%E2%80%A2"
+    alt="Animated note"
+  />
+</p>
 
 <!-- Tech badges -->
 <p>
@@ -129,7 +129,7 @@ Short description ("Please select your age")
 
 Two buttons:
 
-I AM 18+ – saves "true" to localStorage and hides the gate.
+I AM 18+ – saves "true"`` to localStorage` and hides the gate.
 
 I AM NOT 18+ – redirects to another URL (you can customize this to your preference ofc).
 
@@ -222,4 +222,4 @@ Gradient buttons with hover effects.
 
 📄 Licenses?
 
-This template is mine and free to use, modify, and distribute in personal or commercial projects. No credit or anything necessary (but always appreciated!)
+This template is mine and free to use, modify, etc. No credit or anything necessary (but always appreciated!)
