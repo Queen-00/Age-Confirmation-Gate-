@@ -50,7 +50,6 @@
 </p>
 </div>
 
-<!-- spacer to ensure the next heading doesn't sit inline with the badges -->
 <br/>
 
 ---
@@ -145,7 +144,7 @@ Two buttons:
 
 I AM 18+ – saves "true" to localStorage and hides the gate.
 
-I AM NOT 18+ – redirects to another URL (you can customize this to your preference ofc).
+I AM NOT 18+ – redirects to another URL (you can customize this).
 
 
 
@@ -157,22 +156,17 @@ I AM NOT 18+ – redirects to another URL (you can customize this to your prefer
 
 ---
 
-<h2 align="center">🖥️ Step-by-Step Installation</h2>1. Copy my Code lol
-Copy the full AgeGateTemplate component into your project either directly into Hero.tsx or as its own separate component.
+<h2 align="center">🖥️ Step-by-Step Installation</h2>1. Copy my Code lol – Copy the full AgeGateTemplate component into your project.
 
 
-2. Install Required Packages
-Make sure Tailwind CSS and Lucide React are installed using yarn or npm.
+2. Install Required Packages – Tailwind CSS & Lucide React:
 
 npm install tailwindcss lucide-react
 # or
 yarn add tailwindcss lucide-react
 
-If you haven’t set up Tailwind, follow the official guide.
 
-
-3. Place It in Hero
-Example inside Hero.tsx:
+3. Place It in Hero – Example:
 
 import AgeGateTemplate from "@/components/AgeGateTemplate";
 
@@ -186,27 +180,10 @@ export default function Hero() {
 }
 
 
-4. Customize
-
-Text: Change the title & description inside <h1> and <p>.
-
-Colors: Edit the Tailwind gradient classes (from-emerald-400 via-cyan-400 to-purple-500).
-
-Redirect: Change the <a href="https://www.google.com"> to your preferred under-18 page.
-
-Storage Key: Change const STORAGE_KEY = "ageCheck" if you want a diff localStorage key.
+4. Customize – Text, colors, redirect URL, or STORAGE_KEY.
 
 
-
-5. Test and View
-First run a build test using yarn or npm to make sure it compiles properly without error, saves inconvenience and steps to deploy successfully without build errors. Always test in your local environments, run something like yarn build etc before deployment.
-
-Visit your page in the browser — you should see the age gate.
-Click I AM 18+ and refresh — the gate should not appear again.
-To reset, run in browser console (or if you dont want to reset just load site in mew incognito tab to test the other buttons redirect):
-
-localStorage.removeItem("ageCheck"); 
-location.reload();
+5. Test and View – Build locally before deploying.
 
 
 
@@ -228,3 +205,4 @@ Gradient buttons with hover effects.
 ---
 
 <h2 align="center">📄 Licenses?</h2>This template is mine and free to use, modify, etc. No credit or anything necessary (but always appreciated!)
+
