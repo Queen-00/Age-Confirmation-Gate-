@@ -31,7 +31,7 @@
   </text>
 </svg>
 
-<!-- Animated typing banner (under title, above icons) -->
+<!-- Animated typing banner -->
 <p align="center">
   <img
     src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2500&pause=900&center=true&vCenter=true&width=720&color=00E5FF&repeat=true&lines=%E2%80%A2%20Age%20Verification%20Gate%20%E2%80%A2;%E2%80%A2%20Ready%20to%20Use%20%E2%80%A2;%E2%80%A2%20React%20%2B%20Next.js%20%E2%80%A2;%E2%80%A2%20Tailwind%20CSS%20%2B%20Lucide%20Icons%20%E2%80%A2;%E2%80%A2%20Neon%20Theme%20%26%20LocalStorage%20%E2%80%A2"
@@ -56,32 +56,29 @@
 
 <h2 align="center">📝 Overview</h2>
 
-Here’s my simple README.md style guide you can drop my template code directly into your GitHub repo for your Age Check Gate.  
-It’s written in simple, clear language so even as a beginner you can follow it. 🤗
-
-A very simple, reusable **React + Next.js** age check component with a neon **green → blue → purple** color scheme/style.  
-It blocks viewing access to your page/site til users confirms they're 18+, storing their confirmation in `localStorage` so they don’t see it again. Ultimately this is not an actual age verification lol it obviously doesn't check or scan IDs etc its literally just a pretty hey this sites intended for adults, type of notice.
+A simple, reusable **React + Next.js** age check component with a neon **green → blue → purple** style.  
+Blocks site access until users confirm they're 18+, storing the choice in `localStorage`.  
 
 ---
 
 <h2 align="center">✨ Features</h2>
 
-- Copy & Paste Ready – Self-contained, minimal setup needed.  
-- Neon Theme – vibrant green, blue, and purple gradients.  
-- Persistent State – Remembers confirmation using `localStorage`.  
-- Fully Responsive – Works on mobile and desktop.  
-- Lightweight Animations – Includes heartbeat and shimmer effects.
+- Copy & Paste Ready  
+- Vibrant neon theme  
+- Persistent state via `localStorage`  
+- Mobile + desktop friendly  
+- Lightweight animations  
 
 ---
 
 <h2 align="center">🛠 Requirements</h2>
 
-- Language: JavaScript / TypeScript (React)  
-- Framework: Next.js 13+ (supports the "use client" directive)  
-- Styling: Tailwind CSS for utility classes  
-- Icons: Lucide React for ShieldCheck icon  
+- **Language:** JavaScript / TypeScript (React)  
+- **Framework:** Next.js 13+ (`"use client"`)  
+- **Styling:** Tailwind CSS  
+- **Icons:** Lucide React  
 
-Install Tailwind CSS & Lucide React:
+Install required packages:  
 ```bash
 npm install tailwindcss lucide-react
 # or
@@ -90,14 +87,9 @@ yarn add tailwindcss lucide-react
 
 ---
 
-<h2 align="center">📂 Where to Put Code??</h2>Soo you can either:
+📂 Where to Put Code??
+Option 1: Inside Hero.tsx directly
 
-1) Inside Hero.tsx directly
-
-Paste the entire snippet at the top of the file, above your main Hero function.
-Call <AgeGateTemplate /> at the start of your return so it shows before any other content.
-
-// Hero.tsx (example usage)
 import AgeGateTemplate from "@/components/AgeGateTemplate";
 
 export default function Hero() {
@@ -109,100 +101,71 @@ export default function Hero() {
   );
 }
 
-2) As a separate file
-
-Save it as components/AgeGateTemplate.tsx.
-And then import it to your Hero.tsx:
-
-import AgeGateTemplate from "@/components/AgeGateTemplate";
-
-Render at the top of your JSX like so:
-
-return (
-  <>
-    <AgeGateTemplate />
-    {/* Rest of your Hero content */}
-  </>
-);
+Option 2: As a separate file
+Save as components/AgeGateTemplate.tsx and import into Hero.tsx the same way.
 
 
 ---
 
-<h2 align="center">📜 How It Works?</h2>1. When it loads, it checks localStorage for a 'key' ("ageCheck" by default).
+📜 How It Works
+On load, checks localStorage for "ageCheck".
 
 
-2. When the value is "true", it means a user already confirmed and the gate won’t be shown.
+2. If "true", gate is skipped.
 
 
-3. When not confirmed, it displays:
+3. If not set, gate appears with:
 
-Title ("Age Verification")
+Title + description
 
-Short description ("Please select your age")
+I AM 18+ → saves "true" and hides gate
 
-Two buttons:
+I AM NOT 18+ → redirects you
 
-I AM 18+ – saves "true" to localStorage and hides the gate.
-
-I AM NOT 18+ – redirects to another URL (you can customize this).
-
-
-
-
-4. The gradient background, text colors, and animations have all been built using Tailwind classes and very simple CSS animations.
 
 
 
 
 ---
 
-<h2 align="center">🖥️ Step-by-Step Installation</h2>1. Copy my Code lol – Copy the full AgeGateTemplate component into your project.
+🖥️ Step-by-Step Installation
+ Copy the AgeGateTemplate component into your project.
 
 
-2. Install Required Packages – Tailwind CSS & Lucide React:
+2. Install dependencies:
 
 npm install tailwindcss lucide-react
-# or
-yarn add tailwindcss lucide-react
 
 
-3. Place It in Hero – Example:
-
-import AgeGateTemplate from "@/components/AgeGateTemplate";
-
-export default function Hero() {
-  return (
-    <>
-      <AgeGateTemplate />
-      {/* Your Hero section stuff here */}
-    </>
-  );
-}
+3. Place <AgeGateTemplate /> at the top of your Hero.tsx.
 
 
-4. Customize – Text, colors, redirect URL, or STORAGE_KEY.
+4. Customize title, description, colors, and redirect link.
 
 
-5. Test and View – Build locally before deploying.
+5. Build locally, then deploy.
 
 
 
 
 ---
 
-<h2 align="center">🎨 Example Appearance</h2>The gate should appear centered on the screen with:
+🎨 Example Appearance
+The gate appears centered with:
 
-A shield icon at the top.
+A shield icon
 
-Neon green-blue-purple animated title text.
+Neon animated title text
 
-Shimmering divider line.
+Shimmering divider
 
-Gradient buttons with hover effects.
+Gradient buttons with hover effects
 
 
 
 ---
 
-<h2 align="center">📄 Licenses?</h2>This template is mine and free to use, modify, etc. No credit or anything necessary (but always appreciated!)
+📄 License
+Free to use and modify in personal or commercial projects. Credit appreciated but not required.
 
+---
