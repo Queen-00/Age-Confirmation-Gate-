@@ -1,5 +1,5 @@
-Here’s a README.md style guide you can drop straight into a GitHub repo for your Age Gate template.
-It’s written in simple, clear language so even beginners can follow it.
+Here’s my simply README.md style guide you can drop my template code directly into your GitHub repo for your Age Check Gate.
+It’s written in simple, clear language so even as a beginner you can follow it. 🤗
 
 
 ---
