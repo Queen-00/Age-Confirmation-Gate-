@@ -50,6 +50,9 @@
 </p>
 </div>
 
+<!-- spacer to ensure the next heading doesn't sit inline with the badges -->
+<br/>
+
 ---
 
 <h2 align="center">📝 Overview</h2>
