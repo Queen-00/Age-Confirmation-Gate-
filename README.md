@@ -1,20 +1,32 @@
 <div align="center">
 
-<!-- Badge-Style Title (rounded button with neon gradient) -->
-<svg width="540" height="64" viewBox="0 0 540 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Age Gate Template">
+<!-- Badge-Style Title (pill button with neon gradient + subtle animated shine) -->
+<svg width="560" height="74" viewBox="0 0 560 74" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Age Gate Template">
   <defs>
     <linearGradient id="badgeGrad" x1="0" x2="1" y1="0" y2="0">
       <stop offset="0%" stop-color="#34D399"/>
       <stop offset="50%" stop-color="#22D3EE"/>
       <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
-    <filter id="badgeGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
+    <filter id="badgeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect x="2" y="2" rx="16" ry="16" width="536" height="60" fill="#0b1324" stroke="url(#badgeGrad)" stroke-width="2" filter="url(#badgeGlow)"/>
-  <text x="50%" y="50%" fill="url(#badgeGrad)" font-family="Orbitron, ui-sans-serif, system-ui" font-size="22" font-weight="800" dominant-baseline="middle" text-anchor="middle">
+
+  <!-- pill -->
+  <rect x="4" y="7" rx="24" ry="24" width="552" height="60" fill="#0b1324" stroke="url(#badgeGrad)" stroke-width="2.5" filter="url(#badgeGlow)"/>
+  <!-- animated shine -->
+  <rect x="-180" y="7" rx="24" ry="24" width="180" height="60" fill="url(#shine)" opacity="0.6">
+    <animate attributeName="x" from="-180" to="560" dur="3.8s" repeatCount="indefinite"/>
+  </rect>
+  <!-- text -->
+  <text x="50%" y="50%" fill="url(#badgeGrad)" font-family="Orbitron, ui-sans-serif, system-ui" font-size="24" font-weight="800" dominant-baseline="middle" text-anchor="middle">
     Age Gate Template
   </text>
 </svg>
@@ -40,7 +52,8 @@
 
 ---
 
-## 📝 Overview
+<h2 align="center">📝 Overview</h2>
+
 Here’s my simple README.md style guide you can drop my template code directly into your GitHub repo for your Age Check Gate.  
 It’s written in simple, clear language so even as a beginner you can follow it. 🤗
 
@@ -49,7 +62,8 @@ It blocks viewing access to your page/site til users confirms they're 18+, stori
 
 ---
 
-## ✨ Features
+<h2 align="center">✨ Features</h2>
+
 - Copy & Paste Ready – Self-contained, minimal setup needed.  
 - Neon Theme – vibrant green, blue, and purple gradients.  
 - Persistent State – Remembers confirmation using `localStorage`.  
@@ -58,7 +72,8 @@ It blocks viewing access to your page/site til users confirms they're 18+, stori
 
 ---
 
-## 🛠 Requirements
+<h2 align="center">🛠 Requirements</h2>
+
 - Language: JavaScript / TypeScript (React)  
 - Framework: Next.js 13+ (supports the "use client" directive)  
 - Styling: Tailwind CSS for utility classes  
@@ -73,9 +88,7 @@ yarn add tailwindcss lucide-react
 
 ---
 
-📂 Where to Put Code??
-
-Soo you can either:
+<h2 align="center">📂 Where to Put Code??</h2>Soo you can either:
 
 1) Inside Hero.tsx directly
 
@@ -113,9 +126,7 @@ return (
 
 ---
 
-📜 How It Works?
-
-1. When it loads, it checks localStorage for a 'key' ("ageCheck" by default).
+<h2 align="center">📜 How It Works?</h2>1. When it loads, it checks localStorage for a 'key' ("ageCheck" by default).
 
 
 2. When the value is "true", it means a user already confirmed and the gate won’t be shown.
@@ -129,7 +140,7 @@ Short description ("Please select your age")
 
 Two buttons:
 
-I AM 18+ – saves "true"`` to localStorage` and hides the gate.
+I AM 18+ – saves "true" to localStorage and hides the gate.
 
 I AM NOT 18+ – redirects to another URL (you can customize this to your preference ofc).
 
@@ -143,16 +154,12 @@ I AM NOT 18+ – redirects to another URL (you can customize this to your prefer
 
 ---
 
-🖥️ Step-by-Step Installation
-
-1. Copy my Code lol
+<h2 align="center">🖥️ Step-by-Step Installation</h2>1. Copy my Code lol
 Copy the full AgeGateTemplate component into your project either directly into Hero.tsx or as its own separate component.
 
 
 2. Install Required Packages
 Make sure Tailwind CSS and Lucide React are installed using yarn or npm.
-
-
 
 npm install tailwindcss lucide-react
 # or
@@ -160,10 +167,9 @@ yarn add tailwindcss lucide-react
 
 If you haven’t set up Tailwind, follow the official guide.
 
+
 3. Place It in Hero
 Example inside Hero.tsx:
-
-
 
 import AgeGateTemplate from "@/components/AgeGateTemplate";
 
@@ -176,9 +182,8 @@ export default function Hero() {
   );
 }
 
+
 4. Customize
-
-
 
 Text: Change the title & description inside <h1> and <p>.
 
@@ -189,10 +194,9 @@ Redirect: Change the <a href="https://www.google.com"> to your preferred under-1
 Storage Key: Change const STORAGE_KEY = "ageCheck" if you want a diff localStorage key.
 
 
+
 5. Test and View
 First run a build test using yarn or npm to make sure it compiles properly without error, saves inconvenience and steps to deploy successfully without build errors. Always test in your local environments, run something like yarn build etc before deployment.
-
-
 
 Visit your page in the browser — you should see the age gate.
 Click I AM 18+ and refresh — the gate should not appear again.
@@ -202,11 +206,11 @@ localStorage.removeItem("ageCheck");
 location.reload();
 
 
+
+
 ---
 
-🎨 Example Appearance
-
-The gate should appear centered on the screen with:
+<h2 align="center">🎨 Example Appearance</h2>The gate should appear centered on the screen with:
 
 A shield icon at the top.
 
@@ -220,6 +224,4 @@ Gradient buttons with hover effects.
 
 ---
 
-📄 Licenses?
-
-This template is mine and free to use, modify, etc. No credit or anything necessary (but always appreciated!)
+<h2 align="center">📄 Licenses?</h2>This template is mine and free to use, modify, etc. No credit or anything necessary (but always appreciated!)
